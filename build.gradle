@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.livraria'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Dependência do SQLite para o banco de dados
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+}
+
+application {
+    mainClass = 'com.livraria.Main'
+}
