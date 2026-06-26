@@ -1,10 +1,11 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.diffplug.spotless' version '6.25.0'
 }
 
 group = 'com.livraria'
-version = '1.0-SNAPSHOT'
+version = '0.0.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
@@ -16,10 +17,22 @@ repositories {
 }
 
 dependencies {
-    // Dependência do SQLite para o banco de dados
+    // SQLite
     implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+
+    // Remove warnings do SLF4J
+    implementation 'org.slf4j:slf4j-nop:2.0.11'
 }
 
 application {
     mainClass = 'com.livraria.Main'
+}
+
+spotless {
+    java {
+        googleJavaFormat('1.18.1').aosp()
+        indentWithSpaces(4)
+        removeUnusedImports()
+        formatAnnotations()
+    }
 }
