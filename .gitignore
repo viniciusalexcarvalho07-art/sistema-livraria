@@ -2,7 +2,6 @@
 build/
 dist/
 *.class
-*.jar
 
 # IDE
 .idea/
@@ -13,8 +12,6 @@ dist/
 
 # Gradle
 .gradle/
-gradlew
-gradlew.bat
 
 # OS
 .DS_Store
