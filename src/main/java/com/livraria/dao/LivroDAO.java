@@ -4,7 +4,11 @@ import com.livraria.database.DatabaseManager;
 import com.livraria.model.Ebook;
 import com.livraria.model.Livro;
 import com.livraria.model.LivroFisico;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

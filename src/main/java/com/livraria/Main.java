@@ -2,7 +2,7 @@ package com.livraria;
 
 import com.livraria.database.DatabaseManager;
 import com.livraria.ui.JanelaLivraria;
-import javax.swing.*;
+import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
